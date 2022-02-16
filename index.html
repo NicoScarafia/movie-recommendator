@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>Movie Recommendator</title>
+    <link rel="shortcut icon" href="assets/popcorn.png" type="image/x-icon">
+
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+    <!-- style  -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="js/objects.js" defer></script>
+    <script src="js/script.js" defer></script> 
+    <script src="js/quiz-game.js" defer></script> 
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- 1st section / Description -->
+
+        <section id="section-one" class="section-one">
+
+            <div class="section-one-title">
+                <!-- <i class="bi bi-star-fill"></i>  -->
+                
+                <img src="assets/img/icons/popcorn.png" alt="Popcorn image">
+                <h1>Movie Recommender</h1>
+            </div>
+
+            <div class="section-one-container">
+
+                <div class="section-one-content">
+
+                    <div class="site-description">
+                        <p>
+                            &#127916; The objective of this site is to recommend one or more films, based on the user's movie genre preferences. 
+                            Once a genre is selected by the user, the recommended movies will be displayed on screen. 
+                        </p>
+                        <p>
+                            &#128076; The user can also view <span>All the movies</span> that are recommended - despite their genre - OR select the  <span> <a href="#section-three">#RandomRecommendation</a></span> option so that a random movie will be recommended to him/her. 
+                        </p>
+                        <p>
+                            &#127918; Lastly, there's a <span> <a href="#section-four">#mini-quiz</a></span> game to play! 
+                        </p>
+                    </div>
+    
+                    <div class="right-side-content">
+                        <div class="icons-container">
+                            <img src="assets/img/icons/cup.png" alt="Paper cup image">
+                            <img src="assets/img/icons/glasses.png" alt="3d glasses image">
+                            <img src="assets/img/icons/director.png" alt="Director table image">
+                            <img src="assets/img/icons/popcorn.png" alt="Popcorn image">
+                            <img src="assets/img/icons/video.png" alt="Video file icon image">
+                        </div>
+            
+                        <div class="button-div">
+                            <a href="#section-two">Get started!</a>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+
+
+            <div class="darkmode-container">
+
+                <div class="darkmode-buttons">
+                    <button id="switch" class="switch">
+                        <span><i class="bi bi-brightness-high-fill"></i></span>
+                        <span><i class="bi bi-moon-stars-fill"></i></span>
+                    </button>
+                </div>
+    
+                <div class="darkmode-text-container">
+                    <div class="darkmode-text">
+                        <img class="white-arrow" src="assets/img/white-arrow.png" alt="White arrow">
+                        <p>Switch between lightmode / darkmode</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="author-info">
+
+                <div class="github-link">
+                    <a href="https://github.com/NicoScarafia" target="_blank"><i class="bi bi-github"></i></a>
+                </div>
+                
+                <div class="linkedin-link">
+                    <a href="https://www.linkedin.com/in/nicolas-scarafia/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                </div>
+
+                <div class="line"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 2nd section / Form -->
+
+        <section id="section-two" class="section-two">
+
+            <div class="section-two-title">
+                <div class="text">
+                    <h2 class="first-h2">Select a genre</h2>
+                    <h2 class="second-h2">Or browse All</h2>
+                </div>
+
+                <img src="assets/img/icons/director.png" alt="Popcorn image">
+            </div>
+
+            <!-- Form -->
+
+            <div class="form-container">
+
+                <form>
+                    <fieldset>
+        
+                        <legend>- Available genres -</legend>
+        
+                        <div class="generos">
+                            <div><input type="radio" name="genere" id="action" value="action">Action</div>
+                            <div><input type="radio" name="genere" id="animation" value="animation">Animation</div>
+                            <div><input type="radio" name="genere" id="comedy" value="comedy">Comedy</div>
+                            <div><input type="radio" name="genere" id="crime" value="crime">Crime</div>
+                            <div><input type="radio" name="genere" id="drama" value="drama">Drama</div>
+                            <div><input type="radio" name="genere" id="children" value="children">Children</div>
+                            <div><input type="radio" name="genere" id="scifi" value="scifi">Sci-Fi</div>
+                            <div><input type="radio" name="genere" id="heroes" value="heroes">Super Heroes</div>
+                            <div><input type="radio" name="genere" id="terror" value="terror">Terror</div>
+                        </div>
+        
+                        <hr>
+
+                        <div class="todo">
+                            <input type="radio" name="genere" id="show_all" value="show_all">Show everyting
+                        </div>
+        
+                    </fieldset>
+
+                    <hr>
+        
+                    <div class="select-button">
+                        <button id="recomendar_pelicula" class="btn" type="button">Select</button>
+                    </div>
+        
+                </form>
+        
+            </div>
+
+            <!-- Filtros -->
+            <div id="filters">
+
+                <div id="filter_container">
+
+                    <div id="filters_buttons" class="filter-buttons">
+                        <button type="button" id="boton_orden_nombre">Sort by name
+                            <span><i class="bi bi-list-ul"></i></span>
+                        </button>
+                        <button type="button" id="boton_orden_asc">Sort by year asc.
+                            <span><i class="bi bi-arrow-up"></i></span>
+                        </button>
+                        <button type="button" id="boton_orden_desc">Sort by year desc.
+                            <span><i class="bi bi-arrow-down"></i></span>
+                        </button>
+                        <button type="button" id="boton_orden_calific">Sort by rating
+                            <span><i class="bi bi-star"></i></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="main_movies_container" class="main-movies-container">
+
+
+
+            </div>
+
+        </section>
+
+
+        <!-- 3d section / Random movie -->
+
+        <section id="section-three" class="section-three">
+
+            <div class="section-three-title">
+                <h2>Random recommendation</h2>
+                <img src="assets/img/icons/glasses.png" alt="Popcorn image">
+            </div>
+
+            <div class="section-three-container">
+                <div class="section-three-content">
+
+                    <div class="left-side-content">
+                        <div class="text">
+                            <p> If you don't know what movie genre you want, we can recommend you a random movie<br> <br> &#129299;</p>
+                        </div>
+            
+                        <div class="random-button">
+                            <button id="random_movie" class="btn" type="button">Pick a random movie!</button>
+                        </div>
+                    </div>
+            
+                    <div id="display_random" class="display-random"></div>
+    
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <!-- 4th section / Quiz -->
+
+        <section id="section-four" class="section-four">
+
+            <div class="section-four-title">
+                <img src="assets/img/icons/cup.png" alt="Paper cup image">
+                <h2>Quiz Game!</h2>
+                <img src="assets/img/icons/cup.png" alt="Paper cup image">
+            </div>
+
+            <div id="quiz-game-container">
+                <div id="quiz_game">
+                 
+                    <div id="quiz_container" class="quiz-container">
+            
+                        <button id="start_button" class="start-button" type="button">Start</button>
+            
+                        <div id="levels_container" class="levels-container hide">
+                            <p class="select-diff">Select the difficulty</p>
+        
+                            <button id="easy" class="start-button" type="button">Easy</button>
+                            <button id="medium" class="start-button" type="button">Medium</button>
+                            <button id="hard" class="start-button" type="button">Hard</button>
+                        </div>
+            
+                        <!-- dom manipulation -->
+                        <div id="question_container" class="question-container hide"></div>
+            
+                        <button id="restart_button" class="restart-button hide" type="button">Reload & Try Again</button>
+            
+                    </div>
+            
+                    <div class="score hide">
+                        <p>Score: <span id="score"></span></p>
+                    </div>
+            
+                    <template class="template-quiz">
+                        <p class="question-number"></p>
+            
+                        <p class="question"></p>
+            
+                        <div class="buttons-container">
+                            <div class="options-container">
+                                <button id="option1" class="option option1"></button>
+                                <button id="option2" class="option option2"></button>
+                                <button id="option3" class="option option3"></button>
+                                <button id="option4" class="option option4"></button>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+
+</body>
+
+</html>
