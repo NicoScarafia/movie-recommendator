@@ -11,11 +11,6 @@
         align-items: center;
         padding: 2rem 2rem 0.5rem 6rem;
 
-        i {
-            font-size: 2.5rem;
-            color: white;
-        }
-
         img {
             width: 4rem;
             opacity: 90%;
@@ -189,4 +184,117 @@
             
         }
     }
+}
+
+
+
+
+
+// MEDIA QUERIES MOBILE
+
+@media all and (max-width:576px) {
+
+    .section-one {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .section-one-title {
+            flex-direction: column;
+            padding: 1rem 1rem 1.5rem 1rem;
+    
+            img {
+                width: 2.5rem;
+            }
+    
+            h1 {
+                font-size: 2.5rem;
+                padding: 1rem 0 0 0;
+                text-align: center;
+            }
+        }
+
+        .section-one-content {
+            flex-direction: column;
+            margin: 1rem 0.8rem 0rem 0.8rem;
+    
+            .right-side-content {
+                display: flex;
+                flex-direction: column;
+                margin-top: 1rem;
+    
+                div {
+                    margin-top: 1rem;
+                    margin-left: 0;
+                }
+            } 
+    
+            .site-description {
+                height: auto; width: 95%;
+        
+                p {
+                    font-size: 0.9rem;
+                    line-height: 1.3rem;
+                    padding: 1rem 1rem;
+                    text-align: justify;
+                }
+            }
+    
+            .icons-container {
+                img {
+                    width: 2.5rem;
+                }
+            }
+    
+            .button-div {
+                text-align: center;
+                padding-top: 1rem;
+            }
+        }
+
+        .darkmode-buttons {
+            position: absolute;
+            top: 1.2rem; right: 1.2rem;
+        }
+
+        .darkmode-text-container {
+            width: 8rem;
+            top: 2.5rem; right: 0.2rem;
+            text-align: right;
+    
+            .white-arrow {
+                display: none;
+            }
+    
+            p {
+                font-size: 0.8rem;
+                line-height: 1rem;
+            }
+        }
+    
+        .author-info {
+            position: absolute;
+            bottom: 0;  right: 1.5rem;
+    
+            div {
+                margin-top: 0.4rem;
+            }
+    
+            .line {
+                height: 2rem; width: 0.08rem;
+                background-color: rgba(255, 255, 255, 0.712); 
+            }
+    
+            a {
+                i {
+                    font-size: 1.3rem;
+                }           
+            }
+        }
+
+    }
+
+    
+    
 }

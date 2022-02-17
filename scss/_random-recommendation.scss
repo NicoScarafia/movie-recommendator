@@ -131,3 +131,114 @@
 
 
 
+
+// MEDIA QUERIES MOBILE
+
+@media all and (max-width:576px) {
+
+    .section-three {      
+        .section-three-title {
+            flex-direction: column;
+            padding: 2rem 0;
+    
+            h2{
+                padding: 1rem 1rem;
+                font-size: 2rem;
+                text-align: center;
+            }
+    
+            img {
+                width: 2.5rem;    height:2.5rem;
+                margin: 0 auto;
+            }
+        }
+        
+        .section-three-content {
+            display: flex; flex-direction: column;
+            margin: 0rem 1rem;  
+
+            div {
+                margin: 0 1.5rem;
+            }
+        }
+
+        .left-side-content {
+            width: 100%;
+        }
+
+        .text {
+            font-size: 1.1rem;
+            line-height: 1.4rem;
+        }
+
+        .random-button {
+            display: flex;
+            justify-content: center;
+            padding: 1.2rem 0;
+        }
+
+        
+
+        #display_random {
+            background-color: $transparent-white;
+            height: 20rem;  width: 100%;    max-width: 20rem;
+            border: 0.1rem dotted white;
+            margin: 1.2rem 0;
+            
+
+            .random-movie {
+                display: flex;
+                align-items: center;    justify-content: center;
+                margin: 0.3rem;
+                position: relative;
+                
+
+                div {
+                    margin: 0.8rem 0.5rem;
+
+                    .poster {
+                        width:8rem;    max-width: 10rem;;
+                    }
+            
+                    .rating-container {
+                        position: absolute;
+                        top: -0.8rem; right: 4rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 2.8rem;  height: 2.8rem;
+            
+                        .star-img {
+                            position: absolute;
+                            width: 2.4rem;  height: 2.4rem;
+                            opacity: 90%;
+                        }
+                    }
+            
+                    h3 {
+                        font-size: 0.9rem;
+                        text-transform: uppercase;
+                        margin: 0.2rem 0;
+                        color: white;
+                    }
+            
+                    p, a {
+                        font-size: 0.7rem;
+                        line-height: 0.8rem;
+                    }
+            
+                    a {
+                        color: orange;
+                        text-decoration: none;
+            
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+            
+    }
+
+}
