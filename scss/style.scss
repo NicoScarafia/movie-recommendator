@@ -47,6 +47,25 @@ p {
 }
 
 
+// MEDIA QUERIES MOBILE
+
+@media all and (max-width:576px) {
+
+    .container {
+        scroll-snap-type: unset; //proximity / mandatory
+        overflow-y: scroll;
+        min-height: 100vh;
+        height: auto;
+    
+        section {
+            min-height: 100vh; 
+            scroll-snap-align: unset;   
+        }
+    }
+
+}
+
+
 
 
 //--------------------------------------------------------------
