@@ -51,7 +51,7 @@
 // QUIZ GAME
 
 #quiz_game {
-    padding-top: 4rem;
+    padding-top: 2rem;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -255,7 +255,7 @@
             .option, .start-button, .restart-button {
                 padding: 0.5rem;
                 background-color: rgb(211, 211, 211);
-                width: auto;
+                width: 8rem;
                 max-width: 9rem;
                 font-size: 0.9rem;
             }

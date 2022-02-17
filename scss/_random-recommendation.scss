@@ -137,7 +137,10 @@
 @media all and (max-width:576px) {
 
     .section-three {      
-        padding-bottom: 5rem;
+        max-height: 100vh;
+        height: auto;
+         
+        padding-bottom: 50rem;
 
         .section-three-title {
             flex-direction: column;
@@ -182,12 +185,13 @@
         
 
         #display_random {
+            display: flex;  flex-direction: column;
+            justify-content: center;
             background-color: $transparent-white;
-            height: 20rem;  width: 100%;    max-width: 20rem;
+            height: 22rem;  width: 100%;    max-width: 20rem;
             border: 0.1rem dotted white;
             margin: 1.2rem 0;
-            padding-bottom: 4rem;
-            
+            padding: 1rem 0 0 0;           
 
             .random-movie {
                 display: flex;
@@ -216,6 +220,7 @@
                             width: 2.4rem;  height: 2.4rem;
                             opacity: 90%;
                         }
+
                     }
             
                     h3 {
@@ -226,8 +231,8 @@
                     }
             
                     p, a {
-                        font-size: 0.7rem;
-                        line-height: 0.8rem;
+                        font-size: 0.8rem;
+                        line-height: 1rem;
                     }
             
                     a {

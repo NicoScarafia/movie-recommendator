@@ -45,7 +45,7 @@ let redHood = new Pelicula('Batman: Under the Red Hood', 2010, 'Brandon Vietti',
 
 let superbad = new Pelicula('Superbad', 2007, 'Greg Mottola', ['comedy'], 'inglés', 'assets/img/superbad.jpg', 'https://www.imdb.com/title/tt0829482', 7.6);
 
-let monstersInc = new Pelicula('Monsters, Inc.', 2001, 'Pete Docter, David Silverman, Lee Unkrich', ['children', 'animation'], 'ingles', 'assets/img/monsters-inc.jpg', 'https://www.imdb.com/title/tt0198781/', 8.1)
+let monstersInc = new Pelicula('Monsters, Inc.', 2001, 'Pete Docter', ['children', 'animation'], 'ingles', 'assets/img/monsters-inc.jpg', 'https://www.imdb.com/title/tt0198781/', 8.1)
 
 let ironMan = new Pelicula('Iron Man', 2008, 'Jon Favreau', ['heroes', 'action', 'scifi'], 'ingles', 'assets/img/iron-man.jpg', 'https://www.imdb.com/title/tt0371746/', 7.9)
 
@@ -93,9 +93,9 @@ let dictator = new Pelicula ('The Dictator', 2012, 'Larry Charles', ['comedy'], 
 
 let megamind = new Pelicula ('Megamind', 2010, 'Tom McGrath', ['animation', 'children'], 'inglés', 'assets/img/megamind.jpg', 'https://www.imdb.com/title/tt1001526', 7.3)
 
-let toyStory2 = new Pelicula ('Toy Story 2', 1999, 'John Lasseter, Ash Brannon, Lee Unkrich', ['animation', 'children'], 'inglés', 'assets/img/toy-story-2.jpg', 'https://www.imdb.com/title/tt0120363', 7.9)
+let toyStory2 = new Pelicula ('Toy Story 2', 1999, 'John Lasseter', ['animation', 'children'], 'inglés', 'assets/img/toy-story-2.jpg', 'https://www.imdb.com/title/tt0120363', 7.9)
 
-let wallaceGromit = new Pelicula ('Wallace & Gromit: La batalla de los vegetales', 2005, 'Steve Box, Nick Park', ['animation', 'children'], 'inglés', 'assets/img/wallace-gromit-vegetales.jpg', 'https://www.imdb.com/title/tt0312004', 7.4)
+let wallaceGromit = new Pelicula ('The Curse of the Were Rabbit', 2005, 'Steve Box, Nick Park', ['animation', 'children'], 'inglés', 'assets/img/wallace-gromit-vegetales.jpg', 'https://www.imdb.com/title/tt0312004', 7.4)
 
 let theOthers = new Pelicula ('The Others', 2001, 'Alejandro Amenábar', ['terror', 'drama'], 'inglés', 'assets/img/the-others.jpg', 'https://www.imdb.com/title/tt0230600', 7.6)
 

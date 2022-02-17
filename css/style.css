@@ -699,7 +699,9 @@ p {
 
 @media all and (max-width: 576px) {
   .section-three {
-    padding-bottom: 5rem;
+    max-height: 100vh;
+    height: auto;
+    padding-bottom: 50rem;
   }
   .section-three .section-three-title {
     flex-direction: column;
@@ -736,12 +738,16 @@ p {
     padding: 1.2rem 0;
   }
   .section-three #display_random {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: rgba(255, 255, 255, 0.13);
-    height: 20rem;
+    height: 22rem;
     width: 100%;
     max-width: 20rem;
     border: 0.1rem dotted white;
     margin: 1.2rem 0;
+    padding: 1rem 0 0 0;
   }
   .section-three #display_random .random-movie {
     display: flex;
@@ -780,8 +786,8 @@ p {
     color: white;
   }
   .section-three #display_random .random-movie div p, .section-three #display_random .random-movie div a {
-    font-size: 0.7rem;
-    line-height: 0.8rem;
+    font-size: 0.8rem;
+    line-height: 1rem;
   }
   .section-three #display_random .random-movie div a {
     color: orange;
@@ -826,7 +832,7 @@ p {
   }
 }
 #quiz_game {
-  padding-top: 4rem;
+  padding-top: 2rem;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -993,7 +999,7 @@ p {
   #quiz_game .question-container .option, #quiz_game .question-container .start-button, #quiz_game .question-container .restart-button {
     padding: 0.5rem;
     background-color: lightgray;
-    width: auto;
+    width: 8rem;
     max-width: 9rem;
     font-size: 0.9rem;
   }
