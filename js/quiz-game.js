@@ -134,7 +134,7 @@ function createQuestion(difficulty) {
                     divQuestion.innerHTML = `<div class="perfect-score"> 
                                                 <h3>GAME OVER</h3> 
                                                 <p class="final-score">Final Score: ${scoreValue}/10 <br> PERFECT!!!</p>
-                                                <img style="width: 12rem; margin-bottom: 3rem" src="../assets/img/chuck-approves.jpg">
+                                                <img style="width: 12rem; margin-bottom: 3rem" src="assets/img/chuck-approves.jpg">
                                             </div>`
                 }
 
