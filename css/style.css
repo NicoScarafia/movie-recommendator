@@ -198,6 +198,7 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 5rem;
   }
   .section-one .section-one-title {
     flex-direction: column;
@@ -258,6 +259,7 @@ p {
   .section-one .darkmode-text-container p {
     font-size: 0.8rem;
     line-height: 1rem;
+    text-shadow: unset;
   }
   .section-one .author-info {
     position: absolute;
@@ -403,7 +405,7 @@ p {
   text-align: center;
   padding: 1rem 2rem;
   position: relative;
-  margin: 0.8rem 0rem;
+  margin: 0.8rem 0.5rem;
 }
 .main-movies-container div .poster {
   width: 10rem;
@@ -505,6 +507,76 @@ p {
   }
   .section-two .form-container form .select-button button {
     padding: 0.2rem 0.6rem;
+  }
+  .section-two .main-movies-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    scroll-snap-align: end;
+  }
+  .section-two .main-movies-container div {
+    width: 13rem;
+    max-width: 13rem;
+    text-align: center;
+    padding: 1rem 0rem;
+    position: relative;
+    margin: 0.8rem -0.5rem;
+  }
+  .section-two .main-movies-container div .poster {
+    width: 10rem;
+    border: 0.1rem solid gray;
+  }
+  .section-two .main-movies-container div .rating-container {
+    position: absolute;
+    top: -0.5rem;
+    right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+  .section-two .main-movies-container div .rating-container .star-img {
+    position: absolute;
+    top: -0.05rem;
+    right: 0rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    opacity: 90%;
+  }
+  .section-two .main-movies-container div .rating-container .rate {
+    min-width: 0.5rem;
+    max-width: 0.5rem;
+    position: absolute;
+    right: 1.9rem;
+    color: black;
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+  .section-two .main-movies-container div h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+    color: white;
+  }
+  .section-two .main-movies-container div p {
+    color: white;
+  }
+  .section-two .main-movies-container div p, .section-two .main-movies-container div a {
+    font-size: 0.85rem;
+    line-height: 1.1rem;
+  }
+  .section-two .main-movies-container div a {
+    color: orange;
+    text-decoration: none;
+  }
+  .section-two .main-movies-container div a:hover {
+    text-decoration: underline;
   }
   .section-two #filters #filter_container .filter-buttons {
     flex-direction: column;
@@ -626,6 +698,9 @@ p {
 }
 
 @media all and (max-width: 576px) {
+  .section-three {
+    padding-bottom: 5rem;
+  }
   .section-three .section-three-title {
     flex-direction: column;
     padding: 2rem 0;

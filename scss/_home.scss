@@ -200,6 +200,8 @@
         align-items: center;
         justify-content: center;
 
+        padding-bottom: 5rem;
+
         .section-one-title {
             flex-direction: column;
             padding: 1rem 1rem 1.5rem 1rem;
@@ -270,6 +272,7 @@
             p {
                 font-size: 0.8rem;
                 line-height: 1rem;
+                text-shadow: unset;
             }
         }
     
