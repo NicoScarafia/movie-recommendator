@@ -28,18 +28,6 @@ p {
   scroll-snap-align: start;
 }
 
-@media all and (max-width: 576px) {
-  .container {
-    scroll-snap-type: unset;
-    overflow-y: scroll;
-    min-height: 100vh;
-    height: auto;
-  }
-  .container section {
-    min-height: 100vh;
-    scroll-snap-align: unset;
-  }
-}
 .section-one {
   background-color: #2a2a72;
   background-image: linear-gradient(315deg, #009ffd 0%, #2a2a72 74%);
@@ -492,6 +480,7 @@ p {
     height: 2.5rem;
   }
   .section-two .form-container legend {
+    padding-top: 0.5rem;
     font-size: 0.8rem;
   }
   .section-two .form-container form {
@@ -932,6 +921,18 @@ p {
     width: auto;
     max-width: 9rem;
     font-size: 0.9rem;
+  }
+}
+@media all and (max-width: 576px) {
+  .container {
+    scroll-snap-type: unset;
+    overflow-y: scroll;
+    min-height: 100vh;
+    height: auto;
+  }
+  .container section {
+    min-height: 100vh;
+    scroll-snap-align: unset;
   }
 }
 .darkMode {

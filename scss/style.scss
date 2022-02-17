@@ -47,6 +47,20 @@ p {
 }
 
 
+
+
+
+
+//--------------------------------------------------------------
+
+
+@import 'home.scss';
+@import 'genre-recommender.scss';
+@import 'random-recommendation.scss';
+@import 'quiz-game.scss';
+
+
+
 // MEDIA QUERIES MOBILE
 
 @media all and (max-width:576px) {
@@ -62,20 +76,7 @@ p {
             scroll-snap-align: unset;   
         }
     }
-
 }
-
-
-
-
-//--------------------------------------------------------------
-
-
-@import 'home.scss';
-@import 'genre-recommender.scss';
-@import 'random-recommendation.scss';
-@import 'quiz-game.scss';
-
 
 
 //--------------------------------------------------------------
