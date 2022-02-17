@@ -15,8 +15,8 @@ score.innerHTML = scoreValue
 let currentQuestionIndex = 0
 
 
-
 function start() {
+
     startButton.classList.add('hide')
     divLevels.classList.remove('hide')
     divScore.classList.remove('hide')
@@ -131,9 +131,11 @@ function createQuestion(difficulty) {
                                          <p class="final-score">Final Score: ${scoreValue}/10</p>`
 
                 if (scoreValue == 10) {
-                    divQuestion.innerHTML = `<div class="perfect-score"> <h3>GAME OVER</h3> 
-                                             <p class="final-score">Final Score: ${scoreValue}/10 <br> PERFECT!!!</p>
-                                             <img style="width: 12rem; margin-bottom: 3rem" src="../assets/img/chuck-approves.jpg"></div>`
+                    divQuestion.innerHTML = `<div class="perfect-score"> 
+                                                <h3>GAME OVER</h3> 
+                                                <p class="final-score">Final Score: ${scoreValue}/10 <br> PERFECT!!!</p>
+                                                <img style="width: 12rem; margin-bottom: 3rem" src="../assets/img/chuck-approves.jpg">
+                                            </div>`
                 }
 
                 restartButton.classList.remove('hide')

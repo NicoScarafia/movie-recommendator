@@ -1,0 +1,192 @@
+
+// SECTION ONE
+
+.section-one {
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg,#009ffd 0%, #2a2a72 74%);
+    position: relative;
+
+    .section-one-title {
+        display: flex;
+        align-items: center;
+        padding: 2rem 2rem 0.5rem 6rem;
+
+        i {
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        img {
+            width: 4rem;
+            opacity: 90%;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            font-weight: bold;
+            font-family: $accent-font;
+            padding: 0 0 0 0.7rem;
+        }
+    }
+
+    .section-one-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2.5rem 2rem 0rem 2rem;
+
+        .right-side-content {
+            display: flex;
+            flex-direction: column;
+            margin-top: -4rem;
+
+            div {
+                margin-top: 3rem;
+                margin-left: 2rem;
+            }
+        } 
+
+        .site-description {
+            height: auto; width: 28rem;
+            background-color: $transparent-white;
+            border-radius: 2rem;
+            border: 0.1rem dotted white;
+    
+            p {
+                font-size: 1rem;
+                line-height: 1.6rem;
+                padding: 1.5rem 2rem;
+                text-align: justify;
+    
+                span {
+                    text-decoration: underline;
+
+                    a {
+                        color: rgb(30, 199, 190)
+                    }
+                }
+            }
+        }
+
+        .icons-container {
+            text-align: center;
+
+            img {
+                width: 4.5rem;
+                opacity: 90%;
+            }
+        }
+
+        .button-div {
+            text-align: center;
+            
+            a {
+                background-color: $transparent-white;
+                text-decoration: none;
+                color: white;
+                border: 0.1rem solid white;
+                padding: 0.6rem 2.2rem;
+                height: auto;
+            }
+        }
+    }
+
+    .darkmode-buttons {
+        position: fixed;
+        top: 2rem; right: 3rem;
+        z-index: 10;
+
+        .switch {
+            background-color: rgb(17, 15, 54);
+            border-radius: 60rem;
+            border: none;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            outline: none;
+        
+            &::after {
+                content: "";
+                display: block;
+                background-color: white;
+                width: 1.8rem; height: 1.8rem;
+                border-radius: 60rem;
+                position: absolute;
+                top: 0; left: 0; right: unset;
+                
+                transition: 0.5s ease all;
+            }
+        
+            &.active {
+                background-color: orange;
+                color: black;
+        
+                &::after {
+                    right: 0; left: unset;
+                }
+            }
+        
+            span {
+                width: 1.8rem; height: 1.8rem; line-height: 1.8rem;
+                display: block;
+                color: white;
+            }
+        }
+    }
+
+    .darkmode-text-container {
+        position: absolute;
+        width: 12rem;
+        top: 3.5rem; right: 0.5rem;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 50%;
+        display: none;
+
+        .white-arrow {
+            width: 5rem;
+            rotate: -53deg;
+        }
+
+        p {
+            font-size: 0.9rem;
+            line-height: 1.3rem;
+            text-shadow: 2.8px 2.5px 2px rgb(51, 51, 51);
+        }
+    }
+
+    .author-info {
+        position: absolute;
+        bottom: 0;  right: 3rem;
+        display: flex;  
+        flex-direction: column;
+        align-items: center;   justify-content: center;
+        opacity: 90%;
+
+        div {
+            margin-top: 0.8rem;
+        }
+
+        .line {
+            height: 4rem; width: 0.08rem;
+            background-color: rgba(255, 255, 255, 0.712);
+            
+        }
+
+        a {
+            text-decoration: none;
+
+            i {
+                color: white;
+                font-size: 1.7rem;
+                transition: all 0.3s linear;
+
+                &:hover {
+                    color: orange;
+                }
+            }
+
+            
+        }
+    }
+}

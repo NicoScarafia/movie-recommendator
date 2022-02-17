@@ -1,0 +1,239 @@
+
+.section-four {
+    background-color: #0cbaba;
+    background-image: linear-gradient(315deg, #380036 0%, orange 74%);
+
+    .section-four-title {
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 4rem;    height:4rem;
+            margin: 2.2rem 1rem;
+        }
+
+        h2 {
+            padding: 2rem 0;
+            text-align: center;
+        }
+    }
+}
+
+
+// ------------------------------------------------------
+
+
+// QUIZ GAME
+
+#quiz_game {
+    padding-top: 2rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem 0 2rem 0;  
+        color: white;
+
+        h1 {
+            font-family: $main-font;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+        }
+
+        i {
+            margin: 0 2rem;
+            font-size: 1.8rem;
+        }
+    }
+
+    .quiz-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 35%;
+        background-color: white;
+        border-radius: 1rem;
+        min-height: 20rem;
+        position: relative;
+
+        .levels-container {
+            text-align: center;
+
+            .select-diff {
+                font-family: $accent-font;
+                font-size: 1.5rem;
+                color: black;
+                font-weight: 500;
+                margin-bottom: 2rem;
+            }
+
+            button {
+                font-size: 1.1rem;
+            }
+        }
+        
+        .question-container {
+
+            text-align: center;
+            
+            h3 {
+                font-family: $accent-font;
+                font-size: 3rem;
+                color: black;
+                font-weight: 600;
+                margin: 2rem 0;
+                text-align: center;
+            }
+
+            p, .final-score {
+                font-family: $accent-font;
+                font-size: 1.3rem;
+                color: black;
+                font-weight: 500;
+                margin: 2rem 0;
+                text-align: center;
+            }
+
+            p {
+                padding: 1rem 1rem 0 1rem;
+            }
+
+            .final-score {
+                color: #380036;
+                font-size: 1.8rem;
+            }
+    
+            .buttons-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .options-container {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr 1fr;
+                    grid-template-areas: 'option1 option2'
+                                         'option3 option4';
+                                         
+                    text-align: center;
+                    margin-bottom: 2rem;
+                    align-items: center;
+                }
+            }
+
+            .question-number {
+                position: absolute;
+                top: -2.3rem;  right: 0.8rem;
+                font-size: 1.2rem;
+                color: gray;
+            }
+    
+        }
+
+        .option, .start-button, .restart-button {
+            margin: 0.5rem 0.3rem;
+            padding: 0.3rem;
+            cursor: pointer;
+            border-radius: 0.3rem;
+            background-color: rgb(182, 182, 182);
+            border: none;
+            width: 10rem;
+            height: auto;
+            min-height: 3rem;
+            font-size: 0.9rem;
+        }
+
+        .start-button, .restart-button {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-family: $accent-font;
+            transition: all 0.4s linear;
+
+            &:hover {
+                background-color: #380036;
+                color: white;
+            }
+        }
+
+        .restart-button {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        d
+        .option1 {
+            grid-area: option1;
+        }
+        .option2 {
+            grid-area: option2;
+        }
+        .option3 {
+            grid-area: option3;
+        }
+        .option4 {
+            grid-area: option4;
+        } 
+    }
+}
+
+.perfect-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score {
+    margin: 1.8rem;
+    font-family: $accent-font;
+    font-weight: 500;
+    font-size: 2rem;
+    color:white;
+}
+
+.hide {
+    display: none;
+}
+
+
+// MEDIA QUERIES MOBILE
+
+@media all and (max-width:576px) {
+
+    #quiz_game {
+    
+        .title {
+                
+            h1 {
+                font-size: 2.6rem;
+                margin: 1rem 0 2rem 0;
+                text-align: center;
+            }
+        }
+
+        .quiz-container {
+            width: 90%;
+        }
+
+        .question-container {
+
+            h3 {
+                font-size: 2.6rem;
+            }
+
+            .option, .start-button, .restart-button {
+                padding: 0.5rem;
+                background-color: rgb(211, 211, 211);
+                width: auto;
+                max-width: 9rem;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}

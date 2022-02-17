@@ -22,7 +22,6 @@ const sectionThree = document.querySelector('#section-three')
 const sectionFour = document.querySelector('#section-four')
 
 
-
 btnDarkMode.addEventListener('click', () => {
     sectionOne.classList.toggle('darkMode');
     sectionTwo.classList.toggle('darkMode');
@@ -173,7 +172,7 @@ btnRecomendar.addEventListener('click', () => {
         generarDOM(arrayPeliculas)
     }
 
-    // Elimina la clase hidden de los botones con filtros
+    // Deja de ocultar los botones
     let filtros = document.getElementById('filter_container');
     filtros.style.setProperty('display', 'flex')
 })
@@ -198,7 +197,6 @@ botonOrdenNombre.addEventListener('click', () => {
             divPeliculas.removeChild(divPeliculas.firstChild);
         }
 
-        // Crea los objetos en el div
         let fragmento = document.createDocumentFragment();
 
         let peliculasOrdenadasNombre = arrayAOrdenar.sort((a, b) => {
@@ -405,8 +403,8 @@ botonOrdenCalific.addEventListener('click', () => {
 
 
 
-
 // -------------------------------------------------------------------
+
 
 
 // RECOMENDACIÓN DE PELÍCULA ALEATORIA con JQuery

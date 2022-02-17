@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&family=Outfit:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,700&display=swap');
+
+
+// variables
+$main-font: 'Otomanopee One', sans-serif;
+$accent-font: 'Outfit', sans-serif;
+$third-font: 'PT Serif', serif;
+
+// colors
+$transparent-white: rgba(255, 255, 255, 0.13);
+$purple: #50054d;
+
+
+
+//--------------------------------------------------------------
+
+
+
+* {
+    margin: 0;  padding: 0;
+    box-sizing: border-box;
+    font-family: $accent-font;
+    scroll-behavior: smooth;
+}
+
+
+h1, h2 {
+    color: white; 
+    font-size: 4rem;
+    text-transform: uppercase;
+    padding: 1rem 2rem 0.5rem 5rem;
+}
+
+p {
+    color: white;
+}
+
+.container {
+    scroll-snap-type: y proximity; //proximity / mandatory
+    overflow-y: scroll;
+    height: 100vh;
+
+    section {
+        min-height: 100vh; 
+        scroll-snap-align: start;   
+    }
+}
+
+
+
+
+//--------------------------------------------------------------
+
+
+@import 'home.scss';
+@import 'genre-recommender.scss';
+@import 'random-recommendation.scss';
+@import 'quiz-game.scss';
+
+
+
+//--------------------------------------------------------------
+
+
+
+// DARK MODE CLASS
+
+.darkMode {
+    background-color: #485461;
+    background-image: linear-gradient(315deg, #202122 0%, #28313b 74%);
+    color: white;
+}
+
+
+
+

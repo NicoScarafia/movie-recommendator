@@ -2,19 +2,15 @@
 
 class Pelicula {
 
-    constructor(name, year, director, genre, language, image, imdb, rate, trailer) {
+    constructor(name, year, director, genre, language, image, imdb, rate) {
         this.name = name,
-            this.year = year,
-            this.director = director,
-            this.genre = genre,
-            this.language = language,
-
-            this.image = image,
-            this.imdb = imdb
-
-            this.rate = rate
-
-            this.trailer = trailer
+        this.year = year,
+        this.director = director,
+        this.genre = genre,
+        this.language = language,
+        this.image = image,
+        this.imdb = imdb,
+        this.rate = rate
     }
 }
 
@@ -23,7 +19,7 @@ class Pelicula {
 // MOVIES
 
 
-let bastardosSinGloria = new Pelicula('Inglourious Basterds', 2009, 'Quentin Tarantino', ['action'], 'inglés', 'assets/img/inglourious-basterds.jpg', 'https://www.imdb.com/title/tt0361748/', 8.3, 'https://www.youtube.com/embed/X7bMbkybH_k');
+let bastardosSinGloria = new Pelicula('Inglourious Basterds', 2009, 'Quentin Tarantino', ['action'], 'inglés', 'assets/img/inglourious-basterds.jpg', 'https://www.imdb.com/title/tt0361748/', 8.3);
 
 let threeBillboards = new Pelicula('Three Billboards Outside Ebbing, Missouri', 2017, 'Martin McDonagh', ['drama'], 'inglés', 'assets/img/three-billboards.jpg', 'https://www.imdb.com/title/tt5027774/', 8.1)
 
@@ -65,7 +61,7 @@ let goodfellas = new Pelicula('Goodfellas', 1990, 'Martin Scorsese', ['crime', '
 
 let heat = new Pelicula('Heat', 1995, 'Michael Mann', ['crimen', 'drama', 'action'], 'inglés', 'assets/img/heat.jpg', 'https://www.imdb.com/title/tt0113277', 8.2)
 
-let reyLeon = new Pelicula ('El Rey León', 1994, 'Roger Allers, Rob Minkoff', ['animation', 'children'], 'inglés', 'assets/img/lion-king.jpg', 'https://www.imdb.com/title/tt0110357', 8.5)
+let reyLeon = new Pelicula ('The Lion King', 1994, 'Roger Allers, Rob Minkoff', ['animation', 'children'], 'inglés', 'assets/img/lion-king.jpg', 'https://www.imdb.com/title/tt0110357', 8.5)
 
 let rosemarysBaby = new Pelicula ("Rosemary's Baby", 1968, 'Roman Polanski', ['drama', 'terror'], 'inglés', 'assets/img/rosemarys-baby.jpg', 'https://www.imdb.com/title/tt0063522', 8.0)
 
@@ -91,7 +87,7 @@ let europaReport = new Pelicula ('Europa Report', 2013, 'Sebastián Cordero', ['
 
 let frankenweenie = new Pelicula ('Frankenweenie', 2012, 'Tim Burton', ['animation', 'children'], 'inglés', 'assets/img/frankenweenie.jpg', 'https://www.imdb.com/title/tt1142977', 6.9)
 
-let iceAge = new Pelicula ('La Era de Hielo', 2006, 'Chris Wedge, Carlos Saldanha', ['animation', 'children'], 'inglés', 'assets/img/ice-age.jpg', 'https://www.imdb.com/title/tt0268380', 7.5)
+let iceAge = new Pelicula ('Ice Age', 2006, 'Chris Wedge, Carlos Saldanha', ['animation', 'children'], 'inglés', 'assets/img/ice-age.jpg', 'https://www.imdb.com/title/tt0268380', 7.5)
 
 let dictator = new Pelicula ('The Dictator', 2012, 'Larry Charles', ['comedy'], 'inglés', 'assets/img/dictator.jpg', 'https://www.imdb.com/title/tt1645170', 6.4)
 
@@ -113,7 +109,7 @@ let bloodDiamond = new Pelicula ('Blood Diamond', 2006, 'Edward Zwick', ['drama'
 
 let misery = new Pelicula ('Misery', 1990, 'Rob Reiner', ['terror', 'drama'], 'inglés', 'assets/img/misery.jpg', 'https://www.imdb.com/title/tt0100157', 7.8)
 
-let familiaFuturo = new Pelicula ('La Familia del Futuro', 2007, 'Stephen J. Anderson', ['animation', 'children'], 'inglés', 'assets/img/familia-futuro.jpg', 'https://www.imdb.com/title/tt0396555', 6.8)
+let familiaFuturo = new Pelicula ('Meet the Robinsons', 2007, 'Stephen J. Anderson', ['animation', 'children'], 'inglés', 'assets/img/familia-futuro.jpg', 'https://www.imdb.com/title/tt0396555', 6.8)
 
 let pulpFiction = new Pelicula ('Pulp Fiction', 1994, 'Quentin Tarantino', ['drama', 'action'], 'inglés', 'assets/img/pulp-fiction.jpg', 'https://www.imdb.com/title/tt0110912', 8.9)
 
