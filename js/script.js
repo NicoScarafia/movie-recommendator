@@ -60,66 +60,59 @@ if (localStorage.getItem('dark-mode') == 'true') {
 
 function generarDOM(generoArray) {
 
-    const divPeliculas = document.querySelector('#main_movies_container')
+    let template = document.querySelector('.template').content
+    let fragment = document.createDocumentFragment()
+    let divContainer = document.querySelector('#movies_container')
 
-    // Deja el divPeliculas sin elementos
-    while (divPeliculas.firstChild) {
-        divPeliculas.removeChild(divPeliculas.firstChild);
+    
+    while (divContainer.firstChild) {
+        divContainer.removeChild(divContainer.firstChild);
     }
 
-    // Crea los elementos en el div
-    let fragmento = document.createDocumentFragment();
+    generoArray.forEach(el => {
 
-    generoArray.forEach((el) => {
-        const divIndividual = document.createElement('div');
-        divIndividual.classList.add('card-pelicula', `${el.genre}`)
+        // Primero clona la plantilla
+        let clone = document.importNode(template, true);
 
-        let imagenPelicula = document.createElement('img');
-        imagenPelicula.classList.add('poster')
-        imagenPelicula.setAttribute('src', `${el.image}`)
-        divIndividual.appendChild(imagenPelicula)
+        // Trabaja sobre el clon
+        clone.querySelector('img').src = el.image;
+        clone.querySelector('img').alt = `${el.name} Poster`;
 
-        let rateContainer = document.createElement('div');
-        rateContainer.classList.add('rating-container')
+        clone.querySelector('.rate').textContent = el.rate.toFixed(1);
+        clone.querySelector('a').href = el.imdb;
 
-        let star = document.createElement('img');
-        star.classList.add('star-img')
-        star.setAttribute('src', 'assets/star.png')
-        rateContainer.appendChild(star)
 
-        let ratePelicula = document.createElement('div');
-        ratePelicula.classList.add('rate')
-        ratePelicula.textContent = `${el.rate}`
-        rateContainer.appendChild(ratePelicula)
+        clone.querySelector('h3').textContent = el.name;
+        clone.querySelector('.director').textContent = `Director: ${el.director}`;
+        clone.querySelector('.year').textContent = `Year: ${el.year}`;
+        clone.querySelector('.genre').textContent = `Genre: ${el.genre.join(', ')}`;
 
-        divIndividual.appendChild(rateContainer)
+        // Coloca el video en atributo de datos del botón
+        clone.querySelector('button').dataset.src = el.trailer;
 
-        let tituloPelicula = document.createElement('h3');
-        tituloPelicula.textContent = el.name;
-        divIndividual.appendChild(tituloPelicula);
+        // Esta línea devuelve undefined, el.name es una cadena
+        // clone.querySelector('button').classList.add((el.name).join);
+        fragment.appendChild(clone);
 
-        let directorPelicula = document.createElement('p');
-        directorPelicula.textContent = `Director: ${el.director}`;
-        divIndividual.appendChild(directorPelicula);
+    });
 
-        let anioPelicula = document.createElement('p');
-        anioPelicula.textContent = `Year: ${el.year}`;
-        divIndividual.appendChild(anioPelicula);
+    divContainer.appendChild(fragment);
 
-        let generoPelicula = document.createElement('p');
-        generoPelicula.textContent = `Genre: ${el.genre.join(', ')}`;
-        divIndividual.appendChild(generoPelicula);
 
-        let linkPelicula = document.createElement('a');
-        linkPelicula.setAttribute('href', `${el.imdb}`);
-        linkPelicula.setAttribute('target', '_blank');
-        linkPelicula.textContent = 'Go to IMDb';
-        divIndividual.appendChild(linkPelicula);
+    // Recibir evento en la función, variable "e"
+    $('.show-trailer').on('click', (e) => {
+        // Abrir modal
+        $('.modal-container').addClass('visible');
+        // Obtener iframe y asignar URL guardada en el botón
+        $('.modal-container').find('iframe').attr('src', $(e.currentTarget).data('src'));
+    });
 
-        fragmento.appendChild(divIndividual)
-    })
-
-    divPeliculas.appendChild(fragmento)
+    $('.close-trailer').on('click', () => {
+        // Ocultar modal
+        $('.modal-container').removeClass('visible');
+        // Parar video, poniendo la URL en blanco
+        $('.modal-container').find('iframe').attr('src', '');
+    });
 }
 
 
@@ -188,7 +181,7 @@ btnRecomendar.addEventListener('click', () => {
 let botonOrdenNombre = document.getElementById('boton_orden_nombre')
 botonOrdenNombre.addEventListener('click', () => {
 
-    divPeliculas = document.querySelector('#main_movies_container')
+    divPeliculas = document.querySelector('#movies_container')
 
     function OrdenarPorNombre(arrayAOrdenar) {
 
@@ -244,7 +237,7 @@ botonOrdenNombre.addEventListener('click', () => {
 let botonOrdenAnioAsc = document.getElementById('boton_orden_asc')
 botonOrdenAnioAsc.addEventListener('click', () => {
 
-    divPeliculas = document.querySelector('#main_movies_container')
+    divPeliculas = document.querySelector('#movies_container')
 
     function OrdenarPorAnio(arrayAOrdenar) {
 
@@ -298,7 +291,7 @@ botonOrdenAnioAsc.addEventListener('click', () => {
 let botonOrdenAnioDesc = document.getElementById('boton_orden_desc')
 botonOrdenAnioDesc.addEventListener('click', () => {
 
-    let divPeliculas = document.querySelector('#main_movies_container')
+    let divPeliculas = document.querySelector('#movies_container')
 
     function OrdenarPorAnio(arrayAOrdenar) {
 
@@ -352,7 +345,7 @@ botonOrdenAnioDesc.addEventListener('click', () => {
 let botonOrdenCalific = document.querySelector('#boton_orden_calific')
 botonOrdenCalific.addEventListener('click', () => {
 
-    let divPeliculas = document.querySelector('#main_movies_container')
+    let divPeliculas = document.querySelector('#movies_container')
 
     function OrdenarPorCalificacion(arrayAOrdenar) {
 
@@ -426,7 +419,7 @@ $(() => {
                     <img class="poster" src="${peliculaAleatoria.image}">
                     <div class="rating-container">
                         <img class="star-img" src="assets/star.png">
-                        <div class="rate">${peliculaAleatoria.rate}
+                        <div class="rate">${peliculaAleatoria.rate.toFixed(1)}
                     </div>
                 </div>
 
@@ -434,8 +427,10 @@ $(() => {
                     <h3>${peliculaAleatoria.name}</h3>
                     <p>Director: ${peliculaAleatoria.director}</p>
                     <p>Year: ${peliculaAleatoria.year}</p>
-                    <p>Genere: ${peliculaAleatoria.genre.join(', ')}</p>
-                    <a href="${peliculaAleatoria.imdb}" target="_blank">Go to IMDb</a></div>
+                    <p>Genre: ${peliculaAleatoria.genre.join(', ')}</p>
+                    <a href="${peliculaAleatoria.imdb}" target="_blank">Visit IMDb</a></div>
+                    <a class="movie-trailer" href="${peliculaAleatoria.trailer}" target="_blank">Watch Trailer</a></div>
+
                 </div>
             
             </div>`)

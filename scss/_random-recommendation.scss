@@ -59,14 +59,14 @@
         height: 25rem;  width: 30rem;
         border: 0.1rem dotted white;
         
-
+        
         .random-movie {
             display: flex;
             align-items: center;    justify-content: center;
             margin: 0.5rem;
             position: relative;
             
-
+            
             div {
                 display: flex;
                 flex-direction: column;
@@ -78,11 +78,12 @@
                 .poster {
                     width:10rem;    max-width: 10rem;
                     border: 0.1rem solid rgb(128, 128, 128);
+                    margin-top: -0.5rem;
                 }
         
                 .rating-container {
                     position: absolute;
-                    top: -0.8rem; right: 7.8rem;
+                    top: -1.2rem; right: 7.8rem;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -107,7 +108,7 @@
                 h3 {
                     font-size: 1rem;
                     text-transform: uppercase;
-                    margin: 0.5rem 0;
+                    margin: 0.3rem 0;
                     color: white;
                 }
         
@@ -119,10 +120,15 @@
                 a {
                     color: orange;
                     text-decoration: none;
+                    margin-top: 0.5rem;
         
                     &:hover {
                         text-decoration: underline;
                     }
+                }
+
+                .movie-trailer {
+                    margin-top: -0.8rem;
                 }
             }
         }
@@ -140,7 +146,7 @@
         max-height: 100vh;
         height: auto;
          
-        padding-bottom: 50rem;
+        padding-bottom: 53rem;
 
         .section-three-title {
             flex-direction: column;
@@ -191,7 +197,8 @@
             height: 22rem;  width: 100%;    max-width: 20rem;
             border: 0.1rem dotted white;
             margin: 1.2rem 0;
-            padding: 1rem 0 0 0;           
+            padding: 1rem 0 0 0;     
+            
 
             .random-movie {
                 display: flex;
@@ -205,11 +212,12 @@
 
                     .poster {
                         width:8rem;    max-width: 10rem;;
+                        margin-top: -1rem;
                     }
             
                     .rating-container {
                         position: absolute;
-                        top: -0.8rem; right: 4rem;
+                        top: -1.8rem; right: 4rem;
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -250,3 +258,5 @@
     }
 
 }
+
+

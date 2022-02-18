@@ -20,8 +20,8 @@
     <!-- javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="js/objects.js" defer></script>
-    <script src="js/script.js" defer></script> 
-    <script src="js/quiz-game.js" defer></script> 
+    <script src="js/script.js" defer></script>
+    <script src="js/quiz-game.js" defer></script>
 
 </head>
 
@@ -35,7 +35,7 @@
 
             <div class="section-one-title">
                 <!-- <i class="bi bi-star-fill"></i>  -->
-                
+
                 <img src="assets/img/icons/popcorn.png" alt="Popcorn image">
                 <h1>Movie Recommender</h1>
             </div>
@@ -46,17 +46,21 @@
 
                     <div class="site-description">
                         <p>
-                            &#127916; The objective of this site is to recommend one or more films, based on the user's movie genre preferences. 
-                            Once a genre is selected by the user, the recommended movies will be displayed on screen. 
+                            &#127916; The objective of this site is to recommend one or more films, based on the user's
+                            movie genre preferences.
+                            Once a genre is selected by the user, the recommended movies will be displayed on screen.
                         </p>
                         <p>
-                            &#128076; The user can also view <span>all the movies</span> that are recommended - despite their genre - OR select the  <span> <a href="#section-three">#RandomRecommendation</a></span> option so that a random movie will be recommended to him/her. 
+                            &#128076; The user can also view <span>all the movies</span> that are recommended - despite
+                            their genre - OR select the <span> <a href="#section-three">#RandomRecommendation</a></span>
+                            option so that a random movie will be recommended to him/her.
                         </p>
                         <p>
-                            &#127918; Lastly, there's a <span> <a href="#section-four">#mini-quiz</a></span> game to play! 
+                            &#127918; Lastly, there's a <span> <a href="#section-four">#mini-quiz</a></span> game to
+                            play!
                         </p>
                     </div>
-    
+
                     <div class="right-side-content">
                         <div class="icons-container">
                             <img src="assets/img/icons/cup.png" alt="Paper cup image">
@@ -65,12 +69,12 @@
                             <img src="assets/img/icons/popcorn.png" alt="Popcorn image">
                             <img src="assets/img/icons/video.png" alt="Video file icon image">
                         </div>
-            
+
                         <div class="button-div">
                             <a href="#section-two">Get started!</a>
                         </div>
                     </div>
-    
+
                 </div>
             </div>
 
@@ -83,7 +87,7 @@
                         <span><i class="bi bi-moon-stars-fill"></i></span>
                     </button>
                 </div>
-    
+
                 <div class="darkmode-text-container">
                     <div class="darkmode-text">
                         <img class="white-arrow" src="assets/img/white-arrow.png" alt="White arrow">
@@ -98,9 +102,10 @@
                 <div class="github-link">
                     <a href="https://github.com/NicoScarafia" target="_blank"><i class="bi bi-github"></i></a>
                 </div>
-                
+
                 <div class="linkedin-link">
-                    <a href="https://www.linkedin.com/in/nicolas-scarafia/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/nicolas-scarafia/" target="_blank"><i
+                            class="bi bi-linkedin"></i></a>
                 </div>
 
                 <div class="line"></div>
@@ -129,9 +134,9 @@
 
                 <form>
                     <fieldset>
-        
+
                         <legend>- Available genres -</legend>
-        
+
                         <div class="generos">
                             <div><input type="radio" name="genere" id="action" value="action">Action</div>
                             <div><input type="radio" name="genere" id="animation" value="animation">Animation</div>
@@ -143,23 +148,23 @@
                             <div><input type="radio" name="genere" id="heroes" value="heroes">Super Heroes</div>
                             <div><input type="radio" name="genere" id="terror" value="terror">Terror</div>
                         </div>
-        
+
                         <hr>
 
                         <div class="todo">
                             <input type="radio" name="genere" id="show_all" value="show_all">Show everyting
                         </div>
-        
+
                     </fieldset>
 
                     <hr>
-        
+
                     <div class="select-button">
                         <button id="recomendar_pelicula" class="btn" type="button">Select</button>
                     </div>
-        
+
                 </form>
-        
+
             </div>
 
             <!-- Filtros -->
@@ -184,10 +189,52 @@
                 </div>
             </div>
 
-            <div id="main_movies_container" class="main-movies-container">
+            <!-- DOM MANIPULATION -->          
 
+            <!-- DOM template -->
 
+            <template class="template">
+                <div class="film-container">
 
+                    <div class="poster">
+
+                        <img class="movie-poster" src="" alt="">
+
+                        <div class="rating-container">
+                            <img class="star" src="assets/star.png" alt="">
+                            <p class="rate"></p>
+                        </div>
+
+                    </div>
+
+                    <h3></h3>
+                    <p class="director"></p>
+                    <p class="year"></p>
+                    <p class="genre"></p>
+
+                    <div class="imdb-link">
+                        <a href="" target="_blank">Visit IMDb</a>
+                    </div>
+
+                    <div class="trailer-container">
+                        <button class="show-trailer" data-src="" type="button"><i class="bi bi-film"></i> Watch
+                            trailer</button>
+                    </div>
+                </div>
+            </template>
+
+            <div id="movies_container">
+            </div>
+
+            <div id="modal_container" class="modal-container">
+                <div class="modal">
+                    <button class="close-trailer" type="button"><i class="bi bi-x-lg"></i></button>
+                    <div class="iframe-container">
+                        <iframe src="" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
 
         </section>
@@ -207,16 +254,17 @@
 
                     <div class="left-side-content">
                         <div class="text">
-                            <p> If you don't know what movie genre you want, we can recommend you a random movie<br> <br> &#129299;</p>
+                            <p> If you don't know what movie genre you want, we can recommend you a random movie<br>
+                                <br> &#129299;</p>
                         </div>
-            
+
                         <div class="random-button">
                             <button id="random_movie" class="btn" type="button">Pick a random movie!</button>
                         </div>
                     </div>
-            
+
                     <div id="display_random" class="display-random"></div>
-    
+
                 </div>
             </div>
 
@@ -236,35 +284,36 @@
 
             <div id="quiz-game-container">
                 <div id="quiz_game">
-                 
+
                     <div id="quiz_container" class="quiz-container">
-            
+
                         <button id="start_button" class="start-button" type="button">Start</button>
-            
+
                         <div id="levels_container" class="levels-container hide">
                             <p class="select-diff">Select the difficulty</p>
-        
+
                             <button id="easy" class="start-button" type="button">Easy</button>
                             <button id="medium" class="start-button" type="button">Medium</button>
                             <button id="hard" class="start-button" type="button">Hard</button>
                         </div>
-            
+
                         <!-- dom manipulation -->
                         <div id="question_container" class="question-container hide"></div>
-            
-                        <button id="restart_button" class="restart-button hide" type="button">Reload & Try Again</button>
-            
+
+                        <button id="restart_button" class="restart-button hide" type="button">Reload & Try
+                            Again</button>
+
                     </div>
-            
+
                     <div class="score hide">
                         <p>Score: <span id="score"></span></p>
                     </div>
-            
+
                     <template class="template-quiz">
                         <p class="question-number"></p>
-            
+
                         <p class="question"></p>
-            
+
                         <div class="buttons-container">
                             <div class="options-container">
                                 <button id="option1" class="option option1"></button>

@@ -138,78 +138,151 @@
     }
 }
 
-.main-movies-container {
-    height: auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-    padding-bottom: 2rem;
-    
-    scroll-snap-align: end;   
 
-    div {
-        width: 15rem;
-        max-width: 15rem;
-        text-align: center;
-        padding: 1rem 2rem;
+.modal-container {
+    background-color: rgba(0, 0, 0, 0.945);
+    position: fixed;
+    left: 0;    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+
+    display: none;
+
+    &.visible {
+        display: grid;
+        place-items: center;
+    }
+
+    .modal {
         position: relative;
-        margin: 0.8rem 0.5rem;
+        // padding: 2rem 1.5rem;
+        // border-radius: 1rem;
+        // background-color: #380036;
 
-        .poster {
-            width: 10rem;
-            border: 0.1rem solid rgb(128, 128, 128);
+        button {
+            position: absolute;
+            top: -2.5rem; right: 0;
+            border: none; outline:none;
+            background-color: transparent;
+            cursor: pointer;
+            width: 2rem; height: 2rem;
+            color:white;
+            transition: 0.3s;
+
+            &:hover {
+                color: orange;
+                background-color: rgba(128, 128, 128, 0.116);
+                border-radius: 50px;
+            }
+
+            i {
+                font-size: 1.4rem;
+            }
         }
 
-        .rating-container {
-            position: absolute;
-            top: -0.5rem; right: 0.3rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 2.8rem;  height: 2.8rem;
+        .iframe-container {
+            position:relative;
+            width: 80vw;
+            height: 80vh;
 
-            .star-img {
-                position: absolute;
-                top: -0.05rem; right: 0.6rem;
-                width: 2.8rem;  height: 2.8rem;
-                opacity: 90%;
+            iframe {
+                width:100%;
+                height:100%;
             }
-    
-            .rate {
-                position: absolute;      
-                color: black;
-                font-size: 0.9rem;
-                font-weight: bold;
-            }      
+        }
+    }
+}
+
+
+#movies_container {
+    display: flex;  
+    justify-content: center;    align-items: flex-start;    
+    flex-wrap: wrap;
+    padding: 3rem 4rem;
+    text-align: center;
+
+    .film-container {
+        margin: 1.5rem 2rem;
+        width: 12rem;
+        max-width: 12rem;
+
+        display: flex;  flex-direction: column;
+
+        .poster {
+            position: relative;
+
+            .movie-poster {
+                width: 10rem;
+                border: 0.1rem solid gray;
+            }
+
+            .rating-container {
+                position: absolute;
+                top: -0.8rem; right: 0rem;
+
+                .star {
+                    width: 2.6rem;
+                    opacity: 95%
+                }
+
+                .rate {
+                    position: absolute;
+                    top: 0.7rem;   right: 0.75rem;
+                    font-size: 0.8rem;  font-weight: 600;
+                }
+            }
+           
         }
 
         h3 {
             font-size: 1rem;
             text-transform: uppercase;
-            margin: 0.5rem 0;
+            margin: 0.3rem 0;
             color: white;
         }
-
+        
         p {
-            color: white;
+            margin: 0.1rem 0;
+            font-size: 0.8rem;
         }
 
-        p, a {
-            font-size: 0.85rem;
-            line-height: 1.1rem;
+        .rate {
+            color: black;
+            width: 1.15rem; 
+            font-weight: 800;
         }
 
-        a {
-            color: orange;
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
+        .imdb-link {
+            a {
+                margin: 0.1rem 0;
+                font-size: 0.8rem;
+                color: orange;
+                text-decoration: none;
+                transition: all 0.3s;
+    
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
+        
+        button {
+            cursor: pointer;
+            margin: 0.2rem 0;
+            padding: 0.2rem 0.4rem;
+            font-size: 0.8rem;
+
+            border-radius: 0.3rem;
+
+            background-color: $transparent-white;
+            color: white;
+            border: none;
+        }
     }
+
 }
+
 
 
 
@@ -288,81 +361,81 @@
             }
         }   
 
-        
-.main-movies-container {
-    height: auto;
-    display: flex;  flex-direction: column;
-    justify-content: center;    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-    padding-bottom: 2rem;
-    
-    scroll-snap-align: end;   
+                
+        .main-movies-container {
+            height: auto;
+            display: flex;  flex-direction: column;
+            justify-content: center;    align-items: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            padding-bottom: 2rem;
+            
+            scroll-snap-align: end;   
 
-    div {
-        width: 13rem;
-        max-width: 13rem;
-        text-align: center;
-        padding: 1rem 0rem;
-        position: relative;
-        margin: 0.8rem -0.5rem;
+            div {
+                width: 13rem;
+                max-width: 13rem;
+                text-align: center;
+                padding: 1rem 0rem;
+                position: relative;
+                margin: 0.8rem -0.5rem;
 
-        .poster {
-            width: 10rem;
-            border: 0.1rem solid rgb(128, 128, 128);
-        }
+                .poster {
+                    width: 10rem;
+                    border: 0.1rem solid rgb(128, 128, 128);
+                }
 
-        .rating-container {
-            position: absolute;
-            top: -0.5rem; right: 1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 2.8rem;  height: 2.8rem;
+                .rating-container {
+                    position: absolute;
+                    top: -0.5rem; right: 1rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 2.8rem;  height: 2.8rem;
 
-            .star-img {
-                position: absolute;
-                top: -0.05rem; right: 0rem;
-                width: 2.6rem;  height: 2.6rem;
-                opacity: 90%;
+                    .star-img {
+                        position: absolute;
+                        top: -0.05rem; right: 0rem;
+                        width: 2.6rem;  height: 2.6rem;
+                        opacity: 90%;
+                    }
+            
+                    .rate {
+                        min-width: 0.5rem;  max-width: 0.5rem;
+                        position: absolute;      
+                        right: 1.9rem;
+                        color: black;
+                        font-size: 0.85rem;
+                        font-weight: bold;
+                    }      
+                }
+
+                h3 {
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    margin: 0.5rem 0;
+                    color: white;
+                }
+
+                p {
+                    color: white;
+                }
+
+                p, a {
+                    font-size: 0.85rem;
+                    line-height: 1.1rem;
+                }
+
+                a {
+                    color: orange;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
             }
-    
-            .rate {
-                min-width: 0.5rem;  max-width: 0.5rem;
-                position: absolute;      
-                right: 1.9rem;
-                color: black;
-                font-size: 0.85rem;
-                font-weight: bold;
-            }      
         }
-
-        h3 {
-            font-size: 1rem;
-            text-transform: uppercase;
-            margin: 0.5rem 0;
-            color: white;
-        }
-
-        p {
-            color: white;
-        }
-
-        p, a {
-            font-size: 0.85rem;
-            line-height: 1.1rem;
-        }
-
-        a {
-            color: orange;
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-}
 
 
         #filters {
@@ -374,4 +447,27 @@
             }
         }
     }
+
+    .modal-container, #modal-container {
+    
+        .modal {
+    
+            .iframe-container {
+                position:relative;
+                width: 90vw;
+                height: 30vh;
+    
+                iframe {
+                    width:100%;
+                    height:100%;
+                }
+            }
+        }
+    }
 }
+
+
+
+
+
+
