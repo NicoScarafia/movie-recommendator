@@ -152,6 +152,7 @@ p {
   padding: 1rem;
   border-radius: 50%;
   display: none;
+  opacity: 50%;
 }
 .section-one .darkmode-text-container .white-arrow {
   width: 5rem;
@@ -749,7 +750,8 @@ p {
 .section-three #display_random .random-movie div h3 {
   font-size: 1rem;
   text-transform: uppercase;
-  margin: 0.3rem 0;
+  margin: 0.2rem 0;
+  margin-top: -0.4rem;
   color: white;
 }
 .section-three #display_random .random-movie div p, .section-three #display_random .random-movie div a {
@@ -759,13 +761,22 @@ p {
 .section-three #display_random .random-movie div a {
   color: orange;
   text-decoration: none;
-  margin-top: 0.5rem;
+  margin-top: 0.2rem;
 }
 .section-three #display_random .random-movie div a:hover {
   text-decoration: underline;
 }
 .section-three #display_random .random-movie div .movie-trailer {
-  margin-top: -0.8rem;
+  margin-top: -0.6rem;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.8rem;
+  border-radius: 0.3rem;
+  background-color: rgba(255, 255, 255, 0.13);
+  color: white;
+  border: none;
+}
+.section-three #display_random .random-movie div .movie-trailer:hover {
+  text-decoration: none;
 }
 
 @media all and (max-width: 576px) {
@@ -872,6 +883,7 @@ p {
 .section-four {
   background-color: #0cbaba;
   background-image: linear-gradient(315deg, #380036 0%, orange 74%);
+  scroll-snap-align: end;
 }
 .section-four .section-four-title {
   display: flex;

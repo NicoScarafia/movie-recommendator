@@ -77,40 +77,32 @@ function generarDOM(generoArray) {
         // Trabaja sobre el clon
         clone.querySelector('img').src = el.image;
         clone.querySelector('img').alt = `${el.name} Poster`;
-
         clone.querySelector('.rate').textContent = el.rate.toFixed(1);
-        clone.querySelector('a').href = el.imdb;
-
-
+        
         clone.querySelector('h3').textContent = el.name;
         clone.querySelector('.director').textContent = `Director: ${el.director}`;
         clone.querySelector('.year').textContent = `Year: ${el.year}`;
         clone.querySelector('.genre').textContent = `Genre: ${el.genre.join(', ')}`;
+        clone.querySelector('a').href = el.imdb;
 
         // Coloca el video en atributo de datos del botón
         clone.querySelector('button').dataset.src = el.trailer;
 
-        // Esta línea devuelve undefined, el.name es una cadena
-        // clone.querySelector('button').classList.add((el.name).join);
         fragment.appendChild(clone);
-
     });
 
     divContainer.appendChild(fragment);
 
 
-    // Recibir evento en la función, variable "e"
     $('.show-trailer').on('click', (e) => {
-        // Abrir modal
         $('.modal-container').addClass('visible');
-        // Obtener iframe y asignar URL guardada en el botón
+        // Obtiene el iframe y asigna al botón la URL guardada
         $('.modal-container').find('iframe').attr('src', $(e.currentTarget).data('src'));
     });
 
     $('.close-trailer').on('click', () => {
-        // Ocultar modal
         $('.modal-container').removeClass('visible');
-        // Parar video, poniendo la URL en blanco
+        // Para la reproducción del video, poniendo la URL en blanco
         $('.modal-container').find('iframe').attr('src', '');
     });
 }
@@ -190,8 +182,6 @@ botonOrdenNombre.addEventListener('click', () => {
             divPeliculas.removeChild(divPeliculas.firstChild);
         }
 
-        let fragmento = document.createDocumentFragment();
-
         let peliculasOrdenadasNombre = arrayAOrdenar.sort((a, b) => {
             if (a.name < b.name) { return -1 }
             else { return 1 }
@@ -246,9 +236,6 @@ botonOrdenAnioAsc.addEventListener('click', () => {
             divPeliculas.removeChild(divPeliculas.firstChild);
         }
 
-        // Crea los objetos en el div
-        let fragmento = document.createDocumentFragment();
-
         let peliculasOrdenadasAsc = arrayAOrdenar.sort((a, b) => a.year - b.year)
 
         generarDOM(peliculasOrdenadasAsc)
@@ -299,9 +286,6 @@ botonOrdenAnioDesc.addEventListener('click', () => {
         while (divPeliculas.firstChild) {
             divPeliculas.removeChild(divPeliculas.firstChild);
         }
-
-        // Crea los objetos en el div
-        let fragmento = document.createDocumentFragment();
 
         let peliculasOrdenadasDesc = arrayAOrdenar.sort((a, b) => b.year - a.year)
 
@@ -354,9 +338,6 @@ botonOrdenCalific.addEventListener('click', () => {
             divPeliculas.removeChild(divPeliculas.firstChild);
         }
 
-        // Crea los objetos en el div
-        let fragmento = document.createDocumentFragment();
-
         let peliculasOrdenadasCalific = arrayAOrdenar.sort((a, b) => b.rate - a.rate)
 
         generarDOM(peliculasOrdenadasCalific)
@@ -400,8 +381,7 @@ botonOrdenCalific.addEventListener('click', () => {
 
 
 
-// RECOMENDACIÓN DE PELÍCULA ALEATORIA con JQuery
-
+// RECOMENDACIÓN DE PELÍCULA ALEATORIA con JQuery 
 
 $(() => {
 
@@ -424,12 +404,13 @@ $(() => {
                 </div>
 
                 <div class="movie-data">
+
                     <h3>${peliculaAleatoria.name}</h3>
                     <p>Director: ${peliculaAleatoria.director}</p>
                     <p>Year: ${peliculaAleatoria.year}</p>
                     <p>Genre: ${peliculaAleatoria.genre.join(', ')}</p>
                     <a href="${peliculaAleatoria.imdb}" target="_blank">Visit IMDb</a></div>
-                    <a class="movie-trailer" href="${peliculaAleatoria.trailer}" target="_blank">Watch Trailer</a></div>
+                    <a class="movie-trailer" href="${peliculaAleatoria.trailer}" target="_blank"><i class="bi bi-film"></i> Watch Trailer</a></div>
 
                 </div>
             

@@ -3,7 +3,6 @@ const divLevels = document.querySelector('#levels_container')
 const divQuestion = document.querySelector('#question_container')
 
 const startButton = document.querySelector('#start_button')
-startButton.addEventListener('click', start)
 
 const restartButton = document.querySelector('#restart_button')
 
@@ -14,6 +13,8 @@ score.innerHTML = scoreValue
 
 let currentQuestionIndex = 0
 
+
+startButton.addEventListener('click', start)
 
 function start() {
 
