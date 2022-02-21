@@ -141,7 +141,9 @@
 
         .white-arrow {
             width: 5rem;
-            rotate: -53deg;
+            -moz-transform:rotate(-53deg);
+            -webkit-transform:rotate(-53deg);
+            -o-transform:rotate(-53deg);
         }
 
         p {
@@ -193,7 +195,7 @@
 
 // MEDIA QUERIES MOBILE
 
-@media all and (max-width:576px) {
+@media all and (max-width:710px) {
 
     .section-one {
         display: flex;
@@ -298,7 +300,117 @@
         }
 
     }
+}
 
+
+
+
+// MEDIA QUERIES MOBILE
+
+@media all and (min-width: 710px) and (max-width:1100px) {
+
+    .section-one {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding-bottom: 5rem;
+
+        .section-one-title {
+            flex-direction: column;
+            padding: 1rem 1rem 1.5rem 1rem;
     
+            img {
+                width: 4rem;
+            }
     
+            h1 {
+                font-size: 4rem;
+                padding: 2rem 0 0 0;
+                text-align: center;
+            }
+        }
+
+        .section-one-content {
+            flex-direction: column;
+            margin: 1rem 0.8rem 0rem 0.8rem;
+    
+            .right-side-content {
+                display: flex;
+                flex-direction: column;
+                margin-top: 1rem;
+    
+                div {
+                    margin-top: 1rem;
+                    margin-left: 0;
+                }
+            } 
+    
+            .site-description {
+                height: auto; width: 95%;
+        
+                p {
+                    font-size: 1rem;
+                    line-height: 1.6rem;
+                    padding: 1.5rem 1.5rem;
+                    text-align: justify;
+                }
+            }
+    
+            .icons-container {
+                padding: 2rem 0;
+
+                img {
+                    width: 4rem;
+                }
+            }
+    
+            .button-div {
+                text-align: center;
+                padding-top: 1rem;
+            }
+        }
+
+        .darkmode-buttons {
+            position: absolute;
+            top: 1.2rem; right: 1.2rem;
+        }
+
+        .darkmode-text-container {
+            width: 8rem;
+            top: 2.5rem; right: 0.2rem;
+            text-align: right;
+    
+            .white-arrow {
+                display: none;
+            }
+    
+            p {
+                font-size: 0.8rem;
+                line-height: 1rem;
+                text-shadow: unset;
+            }
+        }
+    
+        .author-info {
+            position: absolute;
+            bottom: 0;  right: 1.5rem;
+    
+            div {
+                margin-top: 0.4rem;
+            }
+    
+            .line {
+                height: 2rem; width: 0.08rem;
+                background-color: rgba(255, 255, 255, 0.712); 
+            }
+    
+            a {
+                i {
+                    font-size: 1.8rem;
+                }           
+            }
+        }
+    }
 }
