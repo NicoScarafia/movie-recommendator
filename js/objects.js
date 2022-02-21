@@ -25,7 +25,7 @@ let bastardosSinGloria = new Pelicula('Inglourious Basterds', 2009, 'Quentin Tar
 
 let threeBillboards = new Pelicula('Three Billboards Outside Ebbing, Missouri', 2017, 'Martin McDonagh', ['drama'], 'inglés', 'assets/img/three-billboards.jpg', 'https://www.imdb.com/title/tt5027774/', 8.1, 'Jit3YhGx5pU')
 
-let exorcismEmily = new Pelicula('The Exorcism of Emily Rose', 2005, 'Scott Derrickson', ['terror'], 'inglés', 'assets/img/emily-rose.jpg', 'https://www.imdb.com/title/tt0404032/', 6.7, 'Bi-PLwxwvy8');
+let exorcismEmily = new Pelicula('The Exorcism of Emily Rose', 2005, 'Scott Derrickson', ['horror'], 'inglés', 'assets/img/emily-rose.jpg', 'https://www.imdb.com/title/tt0404032/', 6.7, 'Bi-PLwxwvy8');
 
 let fantasticFox = new Pelicula('Fantastic Mr. Fox', 2009, 'Wes Anderson', ['comedy'], 'inglés', 'assets/img/fantastic-mrfox.jpg', 'https://www.imdb.com/title/tt0432283', 7.9, 'n2igjYFojUo');
 
@@ -37,7 +37,7 @@ let theLobster = new Pelicula('The Lobster', 2015, 'Yorgos Lanthimos', ['drama']
 
 let arrival = new Pelicula('Arrival', 2016, 'Denis Villeneuve', ['scifi'], 'inglés', 'assets/img/arrival.jpg', 'https://www.imdb.com/title/tt2543164', 7.9, 'tFMo3UJ4B4g');
 
-let theWailing = new Pelicula('The Wailing', 2016, 'Na Hong-jin', ['terror'], 'coreano', 'assets/img/wailing.jpg', 'https://www.imdb.com/title/tt5215952', 7.5, '43uAputjI4k');
+let theWailing = new Pelicula('The Wailing', 2016, 'Na Hong-jin', ['horror'], 'coreano', 'assets/img/wailing.jpg', 'https://www.imdb.com/title/tt5215952', 7.5, '43uAputjI4k');
 
 let odiseaGiles = new Pelicula('La Odisea de los Giles', 2019, 'Sebastián Borensztein', ['drama', 'comedy'], 'español', 'assets/img/odisea-giles.jpg', 'https://www.imdb.com/title/tt10384744', 7.2, 'ZP_o6GQaFW8');
 
@@ -51,7 +51,7 @@ let monstersInc = new Pelicula('Monsters, Inc.', 2001, 'Pete Docter, David Silve
 
 let ironMan = new Pelicula('Iron Man', 2008, 'Jon Favreau', ['heroes', 'action', 'scifi'], 'ingles', 'assets/img/iron-man.jpg', 'https://www.imdb.com/title/tt0371746/', 7.9, '8ugaeA-nMTc')
 
-let alien = new Pelicula('Alien', 1979, 'Ridley Scott', ['scifi', 'terror'], 'inglés', 'assets/img/alien.jpg', 'https://www.imdb.com/title/tt0078748/', 8.4, 'LjLamj-b0I8')
+let alien = new Pelicula('Alien', 1979, 'Ridley Scott', ['scifi', 'horror'], 'inglés', 'assets/img/alien.jpg', 'https://www.imdb.com/title/tt0078748/', 8.4, 'LjLamj-b0I8')
 
 let clockworkOrange = new Pelicula('A Clockwork Orange', 1971, 'Stanley Kubrick', ['drama', 'crime'], 'inglés', 'assets/img/clockwork-orange.jpg', 'https://www.imdb.com/title/tt0066921', 8.3, 'T54uZPI4Z8A')
 
@@ -65,23 +65,23 @@ let heat = new Pelicula('Heat', 1995, 'Michael Mann', ['crime', 'drama', 'action
 
 let reyLeon = new Pelicula ('The Lion King', 1994, 'Roger Allers', ['animación', 'children'], 'inglés', 'assets/img/lion-king.jpg', 'https://www.imdb.com/title/tt0110357', 8.5, 'lFzVJEksoDY')
 
-let rosemarysBaby = new Pelicula ("Rosemary's Baby", 1968, 'Roman Polanski', ['drama', 'terror'], 'inglés', 'assets/img/rosemarys-baby.jpg', 'https://www.imdb.com/title/tt0063522', 8.0, 'dBSbmNNm84Y')
+let rosemarysBaby = new Pelicula ("Rosemary's Baby", 1968, 'Roman Polanski', ['drama', 'horror'], 'inglés', 'assets/img/rosemarys-baby.jpg', 'https://www.imdb.com/title/tt0063522', 8.0, 'dBSbmNNm84Y')
 
 let seven = new Pelicula ('Seven', 1995, 'David Fincher', ['drama', 'crime'], 'inglés', 'assets/img/seven.jpg', 'https://www.imdb.com/title/tt0114369', 8.6, 'znmZoVkCjpI')
 
 let sunsetBlvd = new Pelicula('Sunset Blvd.', 1950, 'Billy Wilder', ['drama'], 'inglés', 'assets/img/sunset-blvd.jpg', 'https://www.imdb.com/title/tt0043014', 8.4, '_dY0SVxnHjQ')
 
-let theBirds = new Pelicula('The Birds', 1963, 'Alfred Hitchcock', ['drama', 'terror'], 'inglés', 'assets/img/the-birds.jpg', 'https://www.imdb.com/title/tt0056869', 7.7, 'lCxR7dlavwg')
+let theBirds = new Pelicula('The Birds', 1963, 'Alfred Hitchcock', ['drama', 'horror'], 'inglés', 'assets/img/the-birds.jpg', 'https://www.imdb.com/title/tt0056869', 7.7, 'lCxR7dlavwg')
 
-let theTenant = new Pelicula ('The Tenant', 1976, 'Roman Polanski', ['drama', 'terror'], 'inglés', 'assets/img/the-tenant.jpg', 'https://www.imdb.com/title/tt0074811', 7.6, '2Y-4rJJw554')
+let theTenant = new Pelicula ('The Tenant', 1976, 'Roman Polanski', ['drama', 'horror'], 'inglés', 'assets/img/the-tenant.jpg', 'https://www.imdb.com/title/tt0074811', 7.6, '2Y-4rJJw554')
 
-let theWickerMan = new Pelicula ('The Wicker Man', 1973, 'Robin Hardy', ['crime', 'terror'], 'inglés', 'assets/img/wicker-man.jpg', 'https://www.imdb.com/title/tt0070917', 7.5, 'yXFYU3v-wL4')
+let theWickerMan = new Pelicula ('The Wicker Man', 1973, 'Robin Hardy', ['crime', 'horror'], 'inglés', 'assets/img/wicker-man.jpg', 'https://www.imdb.com/title/tt0070917', 7.5, 'yXFYU3v-wL4')
 
 let vertigo = new Pelicula ('Vertigo', 1958, 'Alfred Hitchcock', ['crime', 'drama'], 'inglés', 'assets/img/vertigo.jpg', 'https://www.imdb.com/title/tt0052357', 8.3, 'Z5jvQwwHQNY')
 
 let judasMessiah = new Pelicula ('Judas and the Black Messiah', 2021, 'Shaka King', ['drama', 'crime'], 'inglés', 'assets/img/judas-black-messiah.jpg', 'https://www.imdb.com/title/tt9784798', 7.5, 'TnshsDy9QWA')
 
-let split = new Pelicula ('Split', 2016, 'M. Night Shyamalan', ['crime', 'terror'], 'inglés', 'assets/img/split.jpg', 'https://www.imdb.com/title/tt4972582', 7.3, '84TouqfIsiI')
+let split = new Pelicula ('Split', 2016, 'M. Night Shyamalan', ['crime', 'horror'], 'inglés', 'assets/img/split.jpg', 'https://www.imdb.com/title/tt4972582', 7.3, '84TouqfIsiI')
 
 let memoriesOfMurder = new Pelicula ('Memories of Murder', 2003, 'Bong Joon Ho', ['drama', 'crime'], 'coreano', 'assets/img/memories-of-murder.jpg', 'https://www.imdb.com/title/tt0353969', 8.1, 'SjDN7wr0HDc')
 
@@ -99,17 +99,17 @@ let toyStory2 = new Pelicula ('Toy Story 2', 1999, 'John Lasseter, Ash Brannon, 
 
 let wallaceGromit = new Pelicula ('Wallace & Gromit', 2005, 'Steve Box', ['animation', 'children'], 'inglés', 'assets/img/wallace-gromit-vegetales.jpg', 'https://www.imdb.com/title/tt0312004', 7.4, '-08b_XI60_4')
 
-let theOthers = new Pelicula ('The Others', 2001, 'Alejandro Amenábar', ['terror', 'drama'], 'inglés', 'assets/img/the-others.jpg', 'https://www.imdb.com/title/tt0230600', 7.6, 'C7pKqaPtMiA')
+let theOthers = new Pelicula ('The Others', 2001, 'Alejandro Amenábar', ['horror', 'drama'], 'inglés', 'assets/img/the-others.jpg', 'https://www.imdb.com/title/tt0230600', 7.6, 'C7pKqaPtMiA')
 
-let killingSacredDeer = new Pelicula ('The Killing of a Sacred Deer', 2017, 'Yorgos Lanthimos', ['terror', 'drama'], 'inglés', 'assets/img/killing-sacred-deer.jpg', 'https://www.imdb.com/title/tt5715874', 7.0, 'CQFdGfwChtw')
+let killingSacredDeer = new Pelicula ('The Killing of a Sacred Deer', 2017, 'Yorgos Lanthimos', ['horror', 'drama'], 'inglés', 'assets/img/killing-sacred-deer.jpg', 'https://www.imdb.com/title/tt5715874', 7.0, 'CQFdGfwChtw')
 
-let autopsyJaneDoe = new Pelicula ('The Autopsy of Jane Doe', 2016, 'André Øvredal', ['terror'], 'inglés', 'assets/img/autopsy-jane-doe.jpg', 'https://www.imdb.com/title/tt3289956', 6.8, 'dg8r7ph1DKE')
+let autopsyJaneDoe = new Pelicula ('The Autopsy of Jane Doe', 2016, 'André Øvredal', ['horror'], 'inglés', 'assets/img/autopsy-jane-doe.jpg', 'https://www.imdb.com/title/tt3289956', 6.8, 'dg8r7ph1DKE')
 
-let skeletonKey = new Pelicula ('The Skeleton Key', 2005, 'Iain Softley', ['terror'], 'inglés', 'assets/img/skeleton-key.jpg', 'https://www.imdb.com/title/tt0397101', 6.5, '4RlCq1Ash-4')
+let skeletonKey = new Pelicula ('The Skeleton Key', 2005, 'Iain Softley', ['horror'], 'inglés', 'assets/img/skeleton-key.jpg', 'https://www.imdb.com/title/tt0397101', 6.5, '4RlCq1Ash-4')
 
 let bloodDiamond = new Pelicula ('Blood Diamond', 2006, 'Edward Zwick', ['drama'], 'inglés', 'assets/img/blood-diamond.jpg', 'https://www.imdb.com/title/tt0450259', 8.0, 'yknIZsvQjG4')
 
-let misery = new Pelicula ('Misery', 1990, 'Rob Reiner', ['terror', 'drama'], 'inglés', 'assets/img/misery.jpg', 'https://www.imdb.com/title/tt0100157', 7.8, 'XHQ9CPRfDsw')
+let misery = new Pelicula ('Misery', 1990, 'Rob Reiner', ['horror', 'drama'], 'inglés', 'assets/img/misery.jpg', 'https://www.imdb.com/title/tt0100157', 7.8, 'XHQ9CPRfDsw')
 
 let familiaFuturo = new Pelicula ('Meet the Robinsons', 2007, 'Stephen J. Anderson', ['animation', 'children'], 'inglés', 'assets/img/familia-futuro.jpg', 'https://www.imdb.com/title/tt0396555', 6.8, 'S396-fnLldk')
 
@@ -138,7 +138,7 @@ arrayPeliculas = arrayPeliculas.sort((a, b) => {
 
 let arrayAccion = arrayPeliculas.filter(e => { return e.genre.includes('action') });
 let arrayDrama = arrayPeliculas.filter(e => { return e.genre.includes('drama') });
-let arrayTerror = arrayPeliculas.filter(e => { return e.genre.includes('terror') });
+let arrayTerror = arrayPeliculas.filter(e => { return e.genre.includes('horror') });
 let arrayComedia = arrayPeliculas.filter(e => { return e.genre.includes('comedy') });
 let arraySciFi = arrayPeliculas.filter(e => { return e.genre.includes('scifi') });
 let arrayHeroes = arrayPeliculas.filter(e => { return e.genre.includes('heroes') });

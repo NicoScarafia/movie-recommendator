@@ -55,7 +55,6 @@ if (localStorage.getItem('dark-mode') == 'true') {
 
 
 
-
 // GENERAR DOM
 
 function generarDOM(generoArray) {
@@ -71,10 +70,8 @@ function generarDOM(generoArray) {
 
     generoArray.forEach(el => {
 
-        // Primero clona la plantilla
         let clone = document.importNode(template, true);
 
-        // Trabaja sobre el clon
         clone.querySelector('img').src = el.image;
         clone.querySelector('img').alt = `${el.name} Poster`;
         clone.querySelector('.rate').textContent = el.rate.toFixed(1);
@@ -102,7 +99,7 @@ function generarDOM(generoArray) {
 
     $('.close-trailer').on('click', () => {
         $('.modal-container').removeClass('visible');
-        // Para la reproducción del video, poniendo la URL en blanco
+        // Detiene la reproducción del video, poniendo la URL en blanco
         $('.modal-container').find('iframe').attr('src', '');
     });
 }
@@ -117,7 +114,7 @@ btnRecomendar.addEventListener('click', () => {
 
     let action = document.getElementById("action");
     let drama = document.getElementById("drama");
-    let terror = document.getElementById("terror");
+    let horror = document.getElementById("horror");
     let comedy = document.getElementById("comedy");
     let scifi = document.getElementById("scifi");
     let heroes = document.getElementById("heroes");
@@ -132,7 +129,7 @@ btnRecomendar.addEventListener('click', () => {
     else if (drama.checked) {
         generarDOM(arrayDrama)
     }
-    else if (terror.checked) {
+    else if (horror.checked) {
         generarDOM(arrayTerror)
     }
     else if (comedy.checked) {
@@ -196,7 +193,7 @@ botonOrdenNombre.addEventListener('click', () => {
     else if (drama.checked) {
         OrdenarPorNombre(arrayDrama)
     }
-    else if (terror.checked) {
+    else if (horror.checked) {
         OrdenarPorNombre(arrayTerror)
     }
     else if (comedy.checked) {
@@ -247,7 +244,7 @@ botonOrdenAnioAsc.addEventListener('click', () => {
     else if (drama.checked) {
         OrdenarPorAnio(arrayDrama)
     }
-    else if (terror.checked) {
+    else if (horror.checked) {
         OrdenarPorAnio(arrayTerror)
     }
     else if (comedy.checked) {
@@ -298,7 +295,7 @@ botonOrdenAnioDesc.addEventListener('click', () => {
     else if (drama.checked) {
         OrdenarPorAnio(arrayDrama)
     }
-    else if (terror.checked) {
+    else if (horror.checked) {
         OrdenarPorAnio(arrayTerror)
     }
     else if (comedy.checked) {
@@ -349,7 +346,7 @@ botonOrdenCalific.addEventListener('click', () => {
     else if (drama.checked) {
         OrdenarPorCalificacion(arrayDrama)
     }
-    else if (terror.checked) {
+    else if (horror.checked) {
         OrdenarPorCalificacion(arrayTerror)
     }
     else if (comedy.checked) {
