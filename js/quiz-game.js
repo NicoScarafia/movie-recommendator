@@ -54,12 +54,17 @@ function createQuestion(difficulty) {
 
         .then(data => {
 
-            const dataResults = data.results
+            let dataResults = data.results
 
             function showQuestion() {
 
+                // modifica los caracteres extraños que devuelve la API
+                let quot = /&quot;/gi
+                let amper = /&amp;/gi
+                let apost = /&#039;/gi
+
                 // pone la respuesta correcta en una posición aleatoria dentro del array de respuestas posibles
-                let correctAnswer = dataResults[currentQuestionIndex].correct_answer
+                let correctAnswer = dataResults[currentQuestionIndex].correct_answer.replace(amper, "&").replace(quot, '"').replace(apost, "'")
                 let incorrectAnswers = dataResults[currentQuestionIndex].incorrect_answers
                 let allOptions = incorrectAnswers
                 allOptions.splice(Math.floor(Math.random() * incorrectAnswers.length + 1), 0, correctAnswer)
@@ -69,7 +74,8 @@ function createQuestion(difficulty) {
                 const template = document.querySelector('.template-quiz').content
                 const fragment = document.createDocumentFragment()
 
-                template.querySelector('.question').textContent = dataResults[currentQuestionIndex].question
+
+                template.querySelector('.question').textContent = dataResults[currentQuestionIndex].question.replace(amper, "&").replace(quot, '"').replace(apost, "'")
                 template.querySelector('.question-number').textContent = `${currentQuestionIndex + 1}/10`
 
                 let $option1 = template.querySelector('.option1')
@@ -77,10 +83,10 @@ function createQuestion(difficulty) {
                 let $option3 = template.querySelector('.option3')
                 let $option4 = template.querySelector('.option4')
 
-                $option1.textContent = allOptions[0]
-                $option2.textContent = allOptions[1]
-                $option3.textContent = allOptions[2]
-                $option4.textContent = allOptions[3]
+                $option1.textContent = allOptions[0].replace(amper, "&").replace(quot, '"').replace(apost, "'")
+                $option2.textContent = allOptions[1].replace(amper, "&").replace(quot, '"').replace(apost, "'")
+                $option3.textContent = allOptions[2].replace(amper, "&").replace(quot, '"').replace(apost, "'")
+                $option4.textContent = allOptions[3].replace(amper, "&").replace(quot, '"').replace(apost, "'")
 
                 let clone = document.importNode(template, true)
                 fragment.appendChild(clone)
@@ -95,7 +101,7 @@ function createQuestion(difficulty) {
                 let boton4 = document.querySelector('#option4')
                 let botones = [boton1, boton2, boton3, boton4]
 
-                botones.forEach( (b) => {
+                botones.forEach((b) => {
                     b.addEventListener('click', () => {
                         if (b.textContent == correctAnswer) {
                             scoreValue++
